@@ -1,0 +1,29 @@
+#listing filtering and mapping
+import { useState } from "react";
+import "./App.css";
+function App() {
+  const [food, setFood] = useState(["Pasta", "Pizza", "Burger"]);
+  function AddItem(event)
+  {
+    const newItem=document.getElementById('FoodItem').value="";
+    setFood(f=>[...f,newItem]);
+  }
+  function RemoveItem(index)
+  {
+  //remove huna paryo
+    setFood(food.filter((_,i)=>i!==index));//onchange updater
+  }
+  return (
+    <div>
+      <h1>Food List!!</h1>
+      <ul>
+        {food.map((item, index) =>
+          <li key={index} onClick={()=>RemoveItem(item)}> </li>)
+        }
+        </ul>
+        <input type="FoodItem"></input>/
+        <button onClick={AddItem}>Add item</button>        
+        </div>
+  )
+}
+export default App
