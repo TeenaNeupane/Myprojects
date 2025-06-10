@@ -1,1 +1,48 @@
-
+function App() {
+  const [name, setName] = useState("Guest");
+  const [age, setAge] = useState("0");
+  const [comment, setComment] = useState("");
+  const [payment, setPayment] = useState("");
+  const [shipping, setShipping] = useState("");
+  const handleSubmit = () => {
+    alert(`Name: }\nAge: ${age}\nComment: ${comment}\nPayment: ${payment}\nShipping: ${shipping}`);
+  };
+  return (
+    <div>
+      <h1>User Details Form</h1>
+      <label>
+        Name:
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      </label>
+      <p>Name: {name}</p>
+      <label>
+        Age:
+        <input type="number" value={age} onChange={(e) => setAge(e.target.value)} />
+      </label>
+      <p>Age: {age}</p>
+      <label>
+      <p>Comment: {comment}</p>
+      <textarea value={comment} onChange={(e) => setComment(e.target.value)} placeholder="Enter your comment" />
+      </label>
+      <p>Payment: {payment}</p>
+      <select value={payment} onChange={(e) => setPayment(e.target.value)}>
+        <option value="">Select your payment choice</option>
+        <option value="Visa Card">Visa Card</option>
+        <option value="Master Card">Master Card</option>
+        <option value="Online">Online</option>
+        <option value="Gift Card">Gift Card</option>
+      </select>
+      <p>Delivery Mode:</p>
+      <label>
+        <input type="radio" value="Pickup" checked={shipping === "Pickup"} onChange={(e) => setShipping(e.target.value)} />
+        Pickup
+      </label>
+      <label>
+        <input type="radio" value="Delivery" checked={shipping === "Delivery"} onChange={(e) => setShipping(e.target.value)} />
+        Delivery
+      </label>
+      <p>Shipping: {shipping}</p>
+      <button onClick={handleSubmit}>Submit</button>
+    </div> 
+  );
+}
