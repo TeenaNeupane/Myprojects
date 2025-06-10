@@ -1,0 +1,27 @@
+import { useState } from 'react';
+import './App.css';
+function App() {
+  let [cnt, setCnt] = useState(0);
+  let date = new Date();
+  date.setDate(date.getDate() + cnt); // Corrected date modification
+
+  return (
+   //div style ={{backgroundColor:}}
+    <header>
+      <button onClick={() => setCnt(cnt + 1)}>+</button>
+      <p>Count = {cnt}</p>
+      <button onClick={() => setCnt(cnt - 1)}>-</button>
+      <br></br>
+      <button>A</button>
+      <button>B</button>
+      <button>C</button>
+      <button>D</button>
+      <button>E</button>
+
+      <div>
+        <p>{date.toDateString()}</p>
+      </div>
+    </header>
+  );
+}
+export default App;
