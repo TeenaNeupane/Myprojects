@@ -1,22 +1,23 @@
-import { useState } from 'react';
-import './App.css';
-function App() {
-let [cnt, setCnt] = useState(0);
-let date = new Date();
-date.setDate(date.getDate() + cnt); // Corrected date modification
-  return (
-<div style ={{backgroundColor:}}>
-<header>
-<button onClick={() => setCnt(cnt + 1)}>+</button>
-  <p>Count = {cnt}</p>
- <button onClick={() => setCnt(cnt - 1)}>-</button>
-<br></br>
-<button>A</button>
-<button>B</button>
-<button>C</button>
-<button>D</button>
- <button>E</button>
-  <div>
+
+// import { useState } from 'react';
+// import './App.css';
+// function App() {
+// let [cnt, setCnt] = useState(0);
+// let date = new Date();
+// date.setDate(date.getDate() + cnt); // Corrected date modification
+//   return (
+// <div style ={{backgroundColor:}}>
+// <header>
+// <button onClick={() => setCnt(cnt + 1)}>+</button>
+//   <p>Count = {cnt}</p>
+//  <button onClick={() => setCnt(cnt - 1)}>-</button>
+// <br></br>
+// <button>A</button>
+// <button>B</button>
+// <button>C</button>
+// <button>D</button>
+//  <button>E</button>
+//   <div>
 //         <p>{date.toDateString()}</p>
 //       </div>
 //     </header>
@@ -36,6 +37,7 @@ date.setDate(date.getDate() + cnt); // Corrected date modification
 //   );
 // }
 // export default App
+Using Array and map
 // {[1,2,3,4,5].map((ele,idx)=>
 //   {
 //     return(
@@ -69,6 +71,7 @@ date.setDate(date.getDate() + cnt); // Corrected date modification
 //     event.preventDefault();
 //     console.log({ name, age, comment, shipping, payment });
 //   };
+To Create a simple form
 //   return (
 //     <div>
 //       <h1>User Details Form</h1>
@@ -141,6 +144,7 @@ date.setDate(date.getDate() + cnt); // Corrected date modification
 //     </div> 
 //   );
 // }
+Removing and listing food item on click 
 // import { useState } from "react";
 // import "./App.css";
 // function App() {
@@ -189,6 +193,7 @@ date.setDate(date.getDate() + cnt); // Corrected date modification
 // )
 // }
 // export default App;
+USING fOCUS
 // import { useRef } from "react";
 // import "./App.css";
 // function App() {
